@@ -20,7 +20,7 @@ function vowelCheck(letter1){
   }
 }
 
-//Check how many consonants in a row and change to pig latin
+//Check how many consonants in a row, if starts with y, or if is a qu exception, and change to pig latin
 function consTranslate(text){
   var tempString = text.toLowerCase();
   var consecutiveIndex = 1;
@@ -43,7 +43,7 @@ function consTranslate(text){
         }
       }
     }
-    
+
     var startLetters = text.slice(0, consecutiveIndex);
     var endLetters = text.slice(consecutiveIndex);
     return endLetters + startLetters + "ay";
@@ -57,19 +57,27 @@ $(document).ready(function(){
 
     var inputText = $("#paragraph").val();
 
-    var isALetter = letterCheck(inputText);
-    if (isALetter){
-      var firstLetter = inputText.charAt(0);
-      if (vowelCheck(firstLetter)){
-        inputText = inputText + "way";
-        console.log("is vowel " + inputText);
+    var wordArray = inputText.split(/\s*\b\s*/);
+    console.log(wordArray);
+    for(var i = 0; i < wordArray.length; i++){
+      var isALetter = letterCheck(wordArray[i]);
+
+      if (isALetter){
+        var firstLetter = wordArray[i].charAt(0);
+        if (vowelCheck(firstLetter)){
+          wordArray[i] = wordArray[i] + "way";
+        }else{
+          var translateText = consTranslate(wordArray[i]);
+          wordArray[i] = translateText;
+        }
       }else{
-        var translateText = consTranslate(inputText);
-        console.log("is constanant " + translateText);
+        console.log("not a letter");
       }
-    }else{
-      console.log("not a letter");
     }
 
+    $("#output").show();
+    var translation = wordArray.join(" ");
+    $("#pigLatinText").text(translation);
+    console.log(wordArray);
   });
 });
