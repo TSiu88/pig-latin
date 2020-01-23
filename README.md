@@ -1,8 +1,8 @@
 # _Pig Latin Translator_
 
-#### _Specification and String Manipulation Exercise, {Date of current version}_
+#### _Specification and String Manipulation Exercise, 01.23.2020_
 
-#### By _**{List of contributors}**_
+#### By _**Tiffany Siu and Jason McGrady**_
 
 ## Description
 
@@ -10,13 +10,23 @@ _{This is a detailed description of your application. Its purpose and usage.  Gi
 
 ## Setup/Installation Requirements
 
+### Requirements to Run
 * _This is a great place_
 * _to list setup instructions_
+
+### Other Resources Used
 * _in a simple_
 * _easy-to-understand_
 * _format_
 
 _{Leave nothing to chance! You want it to be easy for potential users, employers and collaborators to run your app. Do I need to run a server? How should I set up my databases? Is there other code this app depends on?}_
+
+## Technologies Used
+
+_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
+
+## Notable Features
+_{Point out interesting/unusual/unique features done in this project}_
 
 ## Specifications
 
@@ -45,7 +55,9 @@ _{Leave nothing to chance! You want it to be easy for potential users, employers
   * Example Input: hi how are you?
   * Example Output: ihay owhay areway ouyay?
 
+## Screenshots
 
+_{Show off what it looks like}_
 
 ## Known Bugs
 
@@ -54,10 +66,6 @@ _{Are there issues that have not yet been resolved that you want to let users kn
 ## Support and contact details
 
 _{Let people know what to do if they run into any issues or have questions, ideas or concerns.  Encourage them to contact you or make a contribution to the code.}_
-
-## Technologies Used
-
-_{Tell me about the languages and tools you used to create this app. Assume that I know you probably used HTML and CSS. If you did something really cool using only HTML, point that out.}_
 
 ### License
 
