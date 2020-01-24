@@ -58,7 +58,6 @@ $(document).ready(function(){
     var inputText = $("#paragraph").val();
 
     var wordArray = inputText.split(/\s*\b\s*/);
-    console.log(wordArray);
     for(var i = 0; i < wordArray.length; i++){
       var isALetter = letterCheck(wordArray[i]);
 
@@ -71,13 +70,13 @@ $(document).ready(function(){
           wordArray[i] = translateText;
         }
       }else{
-        console.log("not a letter");
+        //Not a letter
       }
     }
 
     $("#output").show();
     var translation = wordArray.join(" ");
     $("#pigLatinText").text(translation);
-    console.log(wordArray);
+
   });
 });
